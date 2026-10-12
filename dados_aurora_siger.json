@@ -1,0 +1,142 @@
+{
+    "modulos_colonia": [
+        {
+            "id": "MOD-01",
+            "nome": "Habitação",
+            "prioridade": 1,
+            "consumo_kwh": 150,
+            "proibido_desligar": true,
+            "status": "Ativo",
+            "posicao_proxima": [
+                "Suporte Médico",
+                "Alimentação",
+                "Energia"
+            ],
+            "codigo_sensor": "SEN-0x1A",
+            "latencia_observada_ms": 142.5,
+            "latencia_prevista_ms": 140.0,
+            "tensao_v": 240.0,
+            "corrente_a": 6.25,
+            "potencia_w": 1500.0,
+            "mensagem_alerta": "Operação nominal do enlace"
+        },
+        {
+            "id": "MOD-02",
+            "nome": "Alimentação",
+            "prioridade": 2,
+            "consumo_kwh": 150,
+            "proibido_desligar": false,
+            "status": "Ativo",
+            "posicao_proxima": [
+                "Habitação",
+                "Suporte Médico"
+            ],
+            "codigo_sensor": "SEN-0x2B",
+            "latencia_observada_ms": 215.8,
+            "latencia_prevista_ms": 210.0,
+            "tensao_v": 240.0,
+            "corrente_a": 6.25,
+            "potencia_w": 1500.0,
+            "mensagem_alerta": "Sinal estável"
+        },
+        {
+            "id": "MOD-03",
+            "nome": "Suporte Médico",
+            "prioridade": 3,
+            "consumo_kwh": 150,
+            "proibido_desligar": true,
+            "status": "Alerta",
+            "posicao_proxima": [
+                "Habitação",
+                "Alimentação"
+            ],
+            "codigo_sensor": "SEN-0x3C",
+            "latencia_observada_ms": 520.4,
+            "latencia_prevista_ms": 120.0,
+            "tensao_v": 240.0,
+            "corrente_a": 6.25,
+            "potencia_w": 1500.0,
+            "mensagem_alerta": "Congestionamento crítico na banda de telemetria vital"
+        },
+        {
+            "id": "MOD-04",
+            "nome": "Centro Logístico",
+            "prioridade": 4,
+            "consumo_kwh": 100,
+            "proibido_desligar": false,
+            "status": "Ativo",
+            "posicao_proxima": [
+                "Energia"
+            ],
+            "codigo_sensor": "SEN-0x4D",
+            "latencia_observada_ms": 98.2,
+            "latencia_prevista_ms": 95.0,
+            "tensao_v": 240.0,
+            "corrente_a": 4.17,
+            "potencia_w": 1000.8,
+            "mensagem_alerta": "Tráfego normal de gerenciamento"
+        },
+        {
+            "id": "MOD-05",
+            "nome": "Energia",
+            "prioridade": 5,
+            "consumo_kwh": 80,
+            "proibido_desligar": false,
+            "status": "Ativo",
+            "posicao_proxima": [
+                "Todos"
+            ],
+            "codigo_sensor": "SEN-0x5E",
+            "latencia_observada_ms": 210.6,
+            "latencia_prevista_ms": 200.0,
+            "tensao_v": 240.0,
+            "corrente_a": 3.33,
+            "potencia_w": 799.2,
+            "mensagem_alerta": "Flutuação leve na carga de entrada"
+        },
+        {
+            "id": "MOD-06",
+            "nome": "Laboratório",
+            "prioridade": 6,
+            "consumo_kwh": 120,
+            "proibido_desligar": false,
+            "status": "Ativo",
+            "posicao_proxima": [
+                "Energia"
+            ],
+            "codigo_sensor": "SEN-0x6F",
+            "latencia_observada_ms": 185.0,
+            "latencia_prevista_ms": 180.0,
+            "tensao_v": 240.0,
+            "corrente_a": 5.0,
+            "potencia_w": 1200.0,
+            "mensagem_alerta": "Sem intercorrências"
+        }
+    ],
+    "alertas_operacionais": [
+        {
+            "id_alerta": "ALT-01",
+            "unidade": "Suporte Médico (MOD-03)",
+            "situacao": "Congestionamento crítico na banda de telemetria vital",
+            "nivel": "CRÍTICA",
+            "prioridade_nota": 10,
+            "latencia_elevada": true
+        },
+        {
+            "id_alerta": "ALT-02",
+            "unidade": "Laboratório (MOD-06)",
+            "situacao": "Vazamento de gás tóxico no Laboratório",
+            "nivel": "CRÍTICA",
+            "prioridade_nota": 9,
+            "latencia_elevada": false
+        },
+        {
+            "id_alerta": "ALT-03",
+            "unidade": "Alimentação (MOD-02)",
+            "situacao": "Falha no sistema de áudio",
+            "nivel": "BAIXA",
+            "prioridade_nota": 2,
+            "latencia_elevada": false
+        }
+    ]
+}
